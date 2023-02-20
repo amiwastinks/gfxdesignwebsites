@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ME! ME! ME!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+}
+
+#canvas {
+  width: 300px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+#tophair {
+  width: 350px;
+  height: 500px;
+  top: 100px;
+  left: 100px;
+  background: rgb(43, 28, 26);
+  border-radius: 25% 25% 25% 25%;
+}
+
+#skin {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 90px;
+  background: rgb(255, 199, 173);
+  border-radius: 0% 0% 50% 50%;
+  box-shadow: inset 0 0 50px rgb(160, 85, 85);
+}
+
+#curlyhair1 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 400px;
+  top: -15px;
+  left: -15px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(15deg);
+}
+
+#curlyhair2 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 400px;
+  top: -15px;
+  right: -15px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-15deg);
+}
+
+#curlyhair3 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -5px;
+  left: 5px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(1deg);
+}
+
+#curlyhair4 {
+  z-index: 1;
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  top: -5px;
+  right: 5px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-1deg);
+}
+
+#curlyhair5 {
+  z-index: 1;
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  top: -25px;
+  left: -8px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 50% 0%;
+  transform: rotate(25deg);
+}
+
+#curlyhair6 {
+  z-index: 1;
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  top: -25px;
+  right: -8px;
+  background: rgb(108, 0, 209);
+  border-radius: 0% 0% 0% 50%;
+  transform: rotate(-25deg);
+}
+
+#eyebrow1 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  background: black;
+  top: 60px;
+  left: 50px;
+  transform: rotate(5deg);
+}
+
+#eyebrow2 {
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  background: black;
+  top: 60px;
+  right: 50px;
+  transform: rotate(-5deg);
+}
+
+#eye1 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  background: white;
+  top: 80px;
+  left: 50px;
+  border-radius: 30% 30% 50% 50%;
+  box-shadow: inset 0 0 20px rgb(131, 108, 108);
+}
+
+#eye2 {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  background: white;
+  top: 80px;
+  right: 50px;
+  border-radius: 30% 30% 50% 50%;
+  box-shadow: inset 0 0 20px rgb(131, 108, 108);
+}
+
+#iris1 {
+  z-index: 1;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(58, 37, 32);
+  top: 95px;
+  left: 75px;
+  border-radius: 50%;
+}
+
+#iris2 {
+  z-index: 1;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(58, 37, 32);
+  top: 95px;
+  right: 75px;
+  border-radius: 50%;
+}
+
+#pupil1 {
+  z-index: 2;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: white;
+  top: 97px;
+  left: 80px;
+  border-radius: 50%;
+}
+
+#pupil2 {
+  z-index: 2;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: white;
+  top: 97px;
+  right: 80px;
+  border-radius: 50%;
+}
+
+#nose {
+  position: absolute;
+  border-bottom: 50px  rgb(255, 199, 173);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 0;
+  width: 20px;
+  top: 150px;
+  left: 127px;
+}
+
+#lips {
+  position: absolute;
+  width: 100px;
+  height: 0px;
+  border: 30px solid;
+  border-color: transparent transparent rgb(190, 111, 111) transparent;
+  top: 200px;
+  left: 72px;
+  border-radius: 50%;
+}
+
+#ear1 {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: rgb(255, 199, 173);
+  box-shadow: inset 0 0 20px rgb(182, 116, 116);
+  left: -46px;
+  top: 50px;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-10deg);
+}
+
+#ear2 {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: rgb(255, 199, 173);
+  box-shadow: inset 0 0 20px rgb(185, 129, 129);
+  right: -46px;
+  top: 50px;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(10deg);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div id="canvas">
+    <div id="tophair">
+      <div id="skin">
+        <div id="curlyhair1"></div>
+        <div id="curlyhair2"></div>
+        <div id="curlyhair3"></div>
+        <div id="curlyhair4"></div>
+        <div id="curlyhair5"></div>
+        <div id="curlyhair6"></div>
+        <div id="eye1"></div>
+        <div id="eye2"></div>
+        <div id="eyebrow1"></div>
+        <div id="eyebrow2"></div>
+        <div id="iris1"></div>
+        <div id="iris2"></div>
+        <div id="pupil1"></div>
+        <div id="pupil2"></div>
+        <div id="nose"></div>
+        <div id="lips"></div>
+        <div id="ear1"></div>
+        <div id="ear2"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
